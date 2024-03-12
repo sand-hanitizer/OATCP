@@ -24,16 +24,11 @@ def findPaths(grid):
     return countPaths(0, 0, grid, visited)
 
 
-file1 = open("grid_paths_test_file1.txt", "r")
-f = file1.read()
-file1.close()
-print(f)
-
 n = int(input())  
 grid = [list(input()) for _ in range(n)]
 ans = findPaths(grid)%MOD
 
 file1 = open("output.txt", "a")  # append mode
-file1.write(ans)
+file1.write(str(ans)+"\n")
 file1.close()
 
